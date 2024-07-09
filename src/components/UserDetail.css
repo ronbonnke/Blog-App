@@ -1,0 +1,42 @@
+.user-detail-container {
+  padding: 20px;
+}
+
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto; /* Allow vertical scrolling */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.posts-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.post-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card h3 {
+  margin: 0;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.post-card p {
+  margin: 0;
+  font-size: 1em;
+  color: #666;
+}

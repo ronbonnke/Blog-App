@@ -1,0 +1,57 @@
+.users-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto; /* Allow vertical scrolling */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.users-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.user-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+}
+
+.user-card a {
+  text-decoration: none;
+  color: #333;
+}
+
+.user-card h3 {
+  margin: 0;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.user-card p {
+  margin: 0;
+  font-size: 1em;
+  color: #666;
+}
+
+/* Media Query for Mobile View */
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .users-container {
+    padding: 10px;
+  }
+
+  .user-card {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
