@@ -16,6 +16,11 @@ const BlogList = () => {
       .catch(error => console.error(error));
   }, []);
 
+  // Function to capitalize the first letter of a string
+  const capitalizeFirstLetter = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+
   return (
     <div className="page-container">
       <h1 className="page-header">List of Blogs</h1>
@@ -23,7 +28,7 @@ const BlogList = () => {
         {sortedBlogs.map(blog => (
           <div key={blog.id} className="blog-card">
             <Link to={`/blog/${blog.id}`}>
-              <h3>{blog.title}</h3>
+              <h3>{capitalizeFirstLetter(blog.title)}</h3>
               <p>{blog.body}</p>
             </Link>
           </div>
