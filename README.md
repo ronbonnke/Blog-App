@@ -4,7 +4,7 @@ This project is a blog application created using [Create React App](https://gith
 
 ## Deployed Project
 
-You can view the deployed project [CLICK HERE TO OPEN PROJECT](https://cool-entremet-3b3ae0.netlify.app/).
+You can view the deployed project [CLICK HERE TO OPEN PROJECT](https://regal-panda-13cf9a.netlify.app/).
 
 ## Available Scripts
 
