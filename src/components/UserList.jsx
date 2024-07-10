@@ -8,7 +8,11 @@ const UserList = () => {
 
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')
-      .then(response => setUsers(response.data))
+      .then(response => {
+        // Sort users alphabetically by name
+        const sortedUsers = response.data.sort((a, b) => a.name.localeCompare(b.name));
+        setUsers(sortedUsers);
+      })
       .catch(error => console.error(error));
   }, []);
 
